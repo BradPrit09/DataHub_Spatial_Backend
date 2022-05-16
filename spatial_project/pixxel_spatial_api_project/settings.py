@@ -28,6 +28,8 @@ DEBUG = True
 ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '*').split()
 
 
+
+
 CSRF_TRUSTED_ORIGINS = [
     "http://localhost:1300",
     "http://127.0.0.1:1300",
@@ -41,7 +43,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'spatial_api_core_app', # used for special management commands
+    'rest_framework',
+    'rest_framework_gis',
+    'spatial_api_core_app', # core settings and management
 ]
 
 MIDDLEWARE = [

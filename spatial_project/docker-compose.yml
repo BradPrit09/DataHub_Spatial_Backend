@@ -40,6 +40,8 @@ services:
       - POSTGRES_DB=${DB_NAME}
       - PGPORT=${DB_PORT}
       - POSTGRES_USER=${POSTGRES_USER}
+    ports:
+      - '3306'
     restart: "on-failure"
     healthcheck:
         test: "exit 0"
